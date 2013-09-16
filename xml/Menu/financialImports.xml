@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<menu>
+  <item>
+     <path>civicrm/finance/import</path>
+     <page_callback>CRM_Finance_Controller_Import</page_callback>
+     <access_arguments>access CiviContribute</access_arguments>
+  </item>
+  <item>
+     <path>civicrm/finance/import/browser</path>
+     <page_callback>CRM_Finance_Form_ImportBrowser</page_callback>
+     <access_arguments>access CiviContribute</access_arguments>
+  </item>
+  <item>
+    <path>civicrm/finance/ajax/updateimport</path>
+    <page_callback>CRM_Finance_Page_Ajax::updateImport</page_callback>
+    <access_arguments>access CiviContribute</access_arguments>
+  </item>
+  <item>
+     <path>civicrm/finance/import/browser/item</path>
+     <page_callback>CRM_Finance_Form_ImportBrowser_Item</page_callback>
+     <access_arguments>access CiviContribute</access_arguments>
+  </item>
+  <item>
+     <path>civicrm/finance/batch</path>
+     <page_callback>CRM_Finance_Form_Batch</page_callback>
+     <access_arguments>access CiviContribute</access_arguments>
+  </item>
+</menu>
