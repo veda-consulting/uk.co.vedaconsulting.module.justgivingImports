@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <extension key="uk.co.vedaconsulting.module.financialImports" type="module">
   <file>financialImports</file>
-  <name>Financial Imports</name>
-  <description>Financial Imports</description>
+  <name>Just Giving Imports</name>
+  <description>Just Giving Financial Imports</description>
   <urls>
     <url desc="Main Extension Page"></url>
     <url desc="Documentation"></url>
@@ -11,16 +11,16 @@
   </urls>
   <license>AGPL</license>
   <maintainer>
-    <author>Veda Consulting</author>
+    <author>Veda NFP Consulting Limited</author>
     <email>parvez@vedaconsulting.co.uk</email>
   </maintainer>
   <releaseDate>2013-09-09</releaseDate>
   <version>1.0</version>
   <develStage>alpha</develStage>
   <compatibility>
-    <ver>4.2</ver>
+    <ver>4.3</ver>
   </compatibility>
-  <comments>This is a new, undeveloped module</comments>
+  <comments>This is a Beta Release module.</comments>
   <civix>
     <namespace>CRM/Imports</namespace>
   </civix>

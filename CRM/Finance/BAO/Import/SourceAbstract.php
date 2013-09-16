@@ -761,6 +761,10 @@ abstract class CRM_Finance_BAO_Import_SourceAbstract {
         $identifierColumn       = $this->getCustomFieldname($financialTransferTable->id, 'Identifier');
         $dateCreatedColumn      = $this->getCustomFieldname($financialTransferTable->id, 'Date Created');
         $transferEndDateColumn  = $this->getCustomFieldname($financialTransferTable->id, 'Transfer End Date');
+				
+				if ( empty($financialTransferTable) || empty($sourceSystemColumn) || empty($identifierColumn) || empty($dateCreatedColumn) || empty($transferEndDateColumn)) {
+						throw new InvalidArgumentException("Missing Financial Import Reference table or one of its columns");
+				}
         
         // Check if a Financial Import Reference Exists
         $selectSql  = " SELECT id, entity_id ";        
