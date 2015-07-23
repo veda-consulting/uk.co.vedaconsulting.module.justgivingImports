@@ -60,8 +60,7 @@ class CRM_Finance_Utils_DataExchange {
         $setFieldsSql = implode(', ', $setFields);
         $columnFieldsSql = implode(', ', $columnFields);
         
-        CRM_Core_DAO::executeQuery("SET GLOBAL local_infile = 1");
-        $sql = "LOAD DATA LOCAL INFILE '$fileName' INTO TABLE $tableName
+        $sql = "LOAD DATA INFILE '$fileName' INTO TABLE $tableName
             CHARACTER SET {$params['characterSet']}
             FIELDS TERMINATED BY '{$params['fieldsTerminatedBy']}'
                 OPTIONALLY ENCLOSED BY '{$params['optionallyEnclosedBy']}'
@@ -107,8 +106,7 @@ class CRM_Finance_Utils_DataExchange {
         
         $setFieldsSql = implode(', ', $setFields);
         
-        CRM_Core_DAO::executeQuery("SET GLOBAL local_infile = 1");
-        $sql = "LOAD DATA LOCAL INFILE '$fileName' INTO TABLE $tableName
+        $sql = "LOAD DATA INFILE '$fileName' INTO TABLE $tableName
             CHARACTER SET {$params['characterSet']}
             IGNORE {$params['ignoreLines']} LINES
             (@var) SET status = 0, {$setFieldsSql}";
